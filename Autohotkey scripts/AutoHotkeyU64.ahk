@@ -389,20 +389,21 @@ Menu, Tray, Tip, Expand Windows Explorer Selection (AHK)
 	^e::
 	+Enter::
 		Send, ^c
-		Run, edit %clipboard%
+		Run, edit "%clipboard%"
 	return
 	
 ;Edit with gVim
 	^+e::
 		Send, ^c
-		Run, "C:\Program Files (x86)\Vim\vim74\gvim.exe" %clipboard%
+		Run, "C:\Program Files (x86)\Vim\vim74\gvim.exe" "%clipboard%"
 	return
 
 	F9::WinClose, A
 
-;Open Git Bash
+;Open Git Bash, temp hack
 	^b::
 		Send, +{F10}
+		WinWait, ahk_class #32768
 		Send, s
 		Send, s
 		Send, {Enter}
