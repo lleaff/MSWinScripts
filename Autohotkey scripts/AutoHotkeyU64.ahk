@@ -680,7 +680,7 @@ F12 up::Send, {Numpad9 up}{LButton up}
 	^w::Winclose, A
 #IfWinActive
 
-;=====================================VIDEO GAMES===================================
+;=====================================Video Games===================================
 
 ;====================================Endless Legend=================================
 #IfWinActive, ahk_exe EndlessLegend.exe
@@ -716,6 +716,12 @@ HoldRun(){
         }
     }
 }
+
+;=================================Insurgency======================================
+#IfWinActive, ahk_exe insurgency.exe
+	XButton2::Send, {LShift down}
+	XButton2 up::Send, {LShift up}
+#IfWinActive
 
 ;=================================Counter Strike Global Offensive========================
 #IfWinActive, Counter-Strike: Global Offensive ahk_class Valve001
