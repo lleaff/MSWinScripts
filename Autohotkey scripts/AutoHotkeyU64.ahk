@@ -394,6 +394,7 @@ Menu, Tray, Tip, Expand Windows Explorer Selection (AHK)
 	
 ;Edit with gVim
 	^+e::
+		Send, {Space} ;To "refresh" the selection
 		Send, ^c
 		Run, "C:\Program Files (x86)\Vim\vim74\gvim.exe" "%clipboard%"
 	return
